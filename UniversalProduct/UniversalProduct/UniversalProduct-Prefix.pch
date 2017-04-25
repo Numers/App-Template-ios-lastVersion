@@ -1,0 +1,33 @@
+//
+//  UniversalProduct-Prefix.pch
+//  UniversalProduct
+//
+//  Created by 鲍利成 on 2017/4/24.
+//  Copyright © 2017年 鲍利成. All rights reserved.
+//
+
+#ifndef UniversalProduct_Prefix_pch
+#define UniversalProduct_Prefix_pch
+
+#define KMY_AutoLogin @"IsAutoLogin"
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "AppUtils.h"
+#import "GlobalVar.h"
+#import "UIColor+HexString.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#endif
+//打印宏定义
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define NSLog(...)
+#define debugMethod()
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* UniversalProduct_Prefix_pch */
